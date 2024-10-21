@@ -26,7 +26,7 @@ public class DictionaryController {
   }
 
   @GetMapping(value = "/page/{pageNumber}/title/{title}")
-  public List<Dictionary> getTitle(@PathVariable Long pageNumber, @PathVariable String title) {
+  public List<Dictionary> getTitle(@PathVariable String pageNumber, @PathVariable String title) {
     return dictionaryService.findByPageNumber(pageNumber, title);
   }
 }

@@ -15,7 +15,7 @@ public class DictionaryService {
     repository.save(dictionary);
   }
 
-  public List<Dictionary> findByPageNumber(Long pageNumber, String title) {
+  public List<Dictionary> findByPageNumber(String pageNumber, String title) {
     return repository.findByPageNumberAndTitle(pageNumber, title);
   }
 }
