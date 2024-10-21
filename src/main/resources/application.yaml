@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: pdf
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    username: test
+    password: test
+    url: jdbc:postgresql://localhost:5432/dictionary

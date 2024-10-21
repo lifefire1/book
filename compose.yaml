@@ -1,0 +1,10 @@
+services:
+  postgres:
+    container_name: postgres_container
+    image: postgres:13
+    environment:
+      POSTGRES_DB: dictionary
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+    ports:
+      - "5433:5432"
