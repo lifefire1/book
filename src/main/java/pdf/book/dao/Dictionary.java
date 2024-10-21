@@ -1,4 +1,4 @@
-package pdf.book.dto;
+package pdf.book.dao;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
