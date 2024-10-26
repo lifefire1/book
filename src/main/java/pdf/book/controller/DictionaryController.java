@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import pdf.book.dao.Dictionary;
 import pdf.book.dto.DictionaryDto;
+import pdf.book.dto.TranslateDto;
 import pdf.book.service.DictionaryService;
 
 @Controller
@@ -29,8 +30,9 @@ public class DictionaryController {
     return ResponseEntity.ok("Word added successfully");
   }
 
+  @ResponseBody
   @GetMapping(value = "/page/{pageNumber}/title/{title}")
-  public List<Dictionary> getTitle(@PathVariable String pageNumber, @PathVariable String title) {
+  public List<TranslateDto> getTitle(@PathVariable String pageNumber, @PathVariable String title) {
     return dictionaryService.findByPageNumber(pageNumber, title);
   }
 }
